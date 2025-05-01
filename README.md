@@ -1,3 +1,5 @@
+![Project Status](https://img.shields.io/badge/Project%20Status-ongoing-orange)
+
 # 🧠 YOLOv5 - American Sign Language (ASL) Letters Detection
 
 This project leverages **YOLOv5** to detect and classify hand gestures of American Sign Language (ASL) letters:
