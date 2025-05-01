@@ -116,9 +116,9 @@ cd yolov5
 
 ### Make sure to move run.py and best.pt inside yolov5 clone directory
     
-    ```bash
+```bash
     python detect.py --weights runs/train/exp/weights/best.pt --img 640 --source path_to_your_image_or_directory
-    ```
+```
 
     Replace `path_to_your_image_or_directory` with the path to the image or directory where you want to perform predictions.
 
@@ -128,3 +128,4 @@ To predict an image (e.g., `test.jpg`):
 
 ```bash
 python detect.py --weights runs/train/exp/weights/best.pt --img 640 --source test.jpg
+```
