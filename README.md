@@ -32,6 +32,10 @@ This project leverages **YOLOv5** to detect and classify hand gestures of Americ
 - Y  
 - Z
 
+
+### **Model Performance:*
+
+<img src="demo/assests/results.png" alt="Model Performance" width="600"/>
 ---
 
 ## 📦 Prerequisites
@@ -129,5 +133,5 @@ cd yolov5
 To predict an image (e.g., `test.jpg`):
 
 ```bash
-python detect.py --weights runs/train/exp/weights/best.pt --img 640 --source test.jpg
+!python detect.py --weights runs/train/yolov5s_results/weights/best.pt --img 614 --conf 0.1 --source ./Data/test/images/
 ```
