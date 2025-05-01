@@ -46,7 +46,7 @@ This project leverages **YOLOv5** to detect and classify hand gestures of Americ
 ```bash
 git clone https://github.com/ultralytics/yolov5.git
 cd yolov5
-
+```
 
 2. **Install Dependencies:**
 
