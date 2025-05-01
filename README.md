@@ -1,29 +1,52 @@
-# YOLOv5 - American Sign Language Classifier
+# 🧠 YOLOv5 - American Sign Language (ASL) Letters Detection
 
-This project uses YOLOv5 to classify American Sign Language (ASL) hand gestures, specifically the following gestures:
+This project leverages **YOLOv5** to detect and classify hand gestures of American Sign Language (ASL) letters:
 
-- Hello
-- I Love You
-- No
-- Thanks
-- Please
-- Yes
+**Supported Gestures:**  
+- A  
+- B  
+- C  
+- D  
+- E  
+- F  
+- G  
+- H  
+- I  
+- J  
+- K  
+- L  
+- M  
+- N  
+- O  
+- P  
+- Q  
+- R  
+- S  
+- T  
+- U  
+- V  
+- W  
+- X  
+- Y  
+- Z
 
-The model is trained to recognize these ASL gestures from images.
+---
 
-## Prerequisites
+## 📦 Prerequisites
 
-- Python 3.8
-- pip (Python package installer)
+- Python 3.8+
+- `pip` package manager
 
-## Setup
+---
 
-1. **Clone the Repository:**
+## ⚙️ Setup Instructions
 
-    ```bash
-    git clone https://github.com/your-username/yolov5.git
-    cd yolov5
-    ```
+### 1. Clone YOLOv5 Repository
+
+```bash
+git clone https://github.com/ultralytics/yolov5.git
+cd yolov5
+
 
 2. **Install Dependencies:**
 
@@ -56,7 +79,7 @@ The model is trained to recognize these ASL gestures from images.
 
     ```
     yolov5/
-    ├── data/
+    ├── Data/
     │   ├── images/
     │   │   ├── train/
     │   │   └── val/
@@ -84,7 +107,7 @@ The model is trained to recognize these ASL gestures from images.
     train: data/images/train
     val: data/images/val
     nc: 6
-    names: ['Hello', 'ILoveYou', 'No', 'Thanks', 'Please', 'Yes']
+    names: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     ```
 
 6. **Predict using the Model:**
