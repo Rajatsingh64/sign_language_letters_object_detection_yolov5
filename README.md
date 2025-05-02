@@ -131,3 +131,19 @@ To predict an image (e.g., `test.jpg`):
 ```bash
 !python detect.py --weights runs/train/yolov5s_results/weights/best.pt --img 416 --conf 0.4 --source ./Data/test/images/
 ```
+
+## Example Usage
+
+To predict using live webcam images:
+
+### **Step 1:**
+- Copy `run.py` and `best.pt` to the YOLOv5 root directory.
+
+### **Step 2:**
+- Open a terminal and run the following command:
+
+```bash
+python run.py
+
+
+    
