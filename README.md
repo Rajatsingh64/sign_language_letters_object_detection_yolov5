@@ -129,7 +129,7 @@ cd yolov5
 To predict an image (e.g., `test.jpg`):
 
 ```bash
-!python detect.py --weights runs/train/yolov5s_results/weights/best.pt --img 416 --conf 0.4 --source ./Data/test/images/
+!python detect.py --weights best.pt --img 416 --conf 0.4 --source ./Data/test/images/
 ```
 
 ### Detection using webcam
