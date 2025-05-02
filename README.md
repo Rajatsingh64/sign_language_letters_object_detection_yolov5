@@ -132,7 +132,7 @@ To predict an image (e.g., `test.jpg`):
 !python detect.py --weights runs/train/yolov5s_results/weights/best.pt --img 416 --conf 0.4 --source ./Data/test/images/
 ```
 
-## Example Usage
+### Detection using webcam
 
 To predict using live webcam images:
 
@@ -144,6 +144,7 @@ To predict using live webcam images:
 
 ```bash
 python run.py
+```
 
 
     
