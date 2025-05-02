@@ -32,10 +32,24 @@ This project leverages **YOLOv5** to detect and classify hand gestures of Americ
 - Y  
 - Z
 
+---
+
+<div align="center">
+
+### **Detection:**
+
+
+<img src="demo/assets/prediction.jpg" alt="Model Performance" width="1200" height="600"/>
+
+
+---
+
 
 ### **Model Performance:**
 
-<img src="demo/assets/results.png" alt="Model Performance" width="1400" height="500"/>
+<img src="demo/assets/results.png" alt="Model Performance" width="1000" height="300"/>
+
+</div>
 
 
 ## 📦 Prerequisites
