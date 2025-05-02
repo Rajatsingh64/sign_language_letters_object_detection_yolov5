@@ -71,69 +71,55 @@ cd yolov5
     ```bash
     pip install -r requirements.txt
     ```
-
-3. **Label the Data:**
-
-    We use the `labelImg` tool to annotate images for training.
-
-    - Install `labelImg`:
-      ```bash
-      pip install labelImg
-      ```
-
-    - Open the tool and annotate images of the ASL gestures. Save annotations in YOLO format (i.e., `.txt` files with class and coordinates).
     
-    - Example of a label file:
-        ```
-        0 0.5 0.5 0.2 0.3
-        ```
-        The numbers correspond to the class (0 for Hello, 1 for I Love You, etc.), followed by normalized center coordinates and width/height of the bounding box.
-
-4. **Prepare Dataset:**
+3. **Prepare Dataset:**
 
     Organize your dataset into the following folder structure:
 
     ```
     yolov5/
     ├── Data/
-    │   ├── images/
-    │   │   ├── train/
-    │   │   └── val/
-    │   └── labels/
-    │       ├── train/
-    │       └── val/
-    ├── models/
+    │   ├── train/
+    │   │   ├── images/
+    │   │   └── labels/
+    │   ├── val/
+    │   │   ├── images/
+    │   │   └── labels/
+    |   └── test/
+    |        ├── images/
+    │        └── labels/
+    |── models/
     └── train.py
     ```
 
-    - Place your training and validation images in `data/images/train/` and `data/images/val/`.
-    - Place the corresponding annotation files (e.g., `.txt`) in `data/labels/train/` and `data/labels/val/`.
+    - Place your training and validation images in `Data/train/images/` and `Data/val/images/`.
+    - Place the corresponding annotation files (e.g., `.txt`) in `Data/train/labels/` and `Data/val/labels/`.
 
-5. **Train the Model:**
+4. **Train the Model:**
 
     To train the model, run the following command:
 
     ```bash
-    python train.py --img 640 --batch 16 --epochs 50 --data data.yaml --weights yolov5s.pt
+    python train.py --img 416 --batch 16 --epochs 100 --data "yolov5/Data/data.yaml" --weights yolov5s.pt
     ```
 
     Here, `data.yaml` is the configuration file that contains paths to the dataset and class labels. You can create a `data.yaml` like this:
 
     ```yaml
-    train: data/images/train
-    val: data/images/val
-    nc: 6
+    train: ./Data/train/images
+    val: ./Data/val/images
+    nc: 26
     names: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     ```
 
-6. **Predict using the Model:**
+5. **Predict using the Model:**
 
     After training, you can use the model to make predictions on new images:
 
 ### Make sure to move run.py and best.pt inside yolov5 clone directory
     
    ```bash
-    python detect.py --weights runs/train/exp/weights/best.pt --img 640 --source path_to_your_image_or_directory
+    python detect.py --weights runs/train/exp/weights/best.pt --img 416 --source path_to_your_image_or_directory
    ```
 
 - Replace `path_to_your_image_or_directory` with the path to the image or directory where you want to perform predictions.
@@ -143,5 +129,5 @@ cd yolov5
 To predict an image (e.g., `test.jpg`):
 
 ```bash
-!python detect.py --weights runs/train/yolov5s_results/weights/best.pt --img 614 --conf 0.1 --source ./Data/test/images/
+!python detect.py --weights runs/train/yolov5s_results/weights/best.pt --img 416 --conf 0.4 --source ./Data/test/images/
 ```
