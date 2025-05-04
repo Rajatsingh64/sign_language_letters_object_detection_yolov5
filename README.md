@@ -50,7 +50,7 @@ This project leverages **YOLOv5** to detect and classify hand gestures of Americ
 
 ## 📦 Prerequisites
 
-- Python 3.8+
+- Python 3.12
 - `pip` package manager
 
 ---
